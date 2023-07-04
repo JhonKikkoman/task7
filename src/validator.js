@@ -1,25 +1,24 @@
 export default class Validator {
   static validateUsername(userName) {
-    let result = false;
     if (/[а-яА-Я]/.test(userName)) {
-      return result;
+      return false;
     }
     if (/[^\w-]/.test(userName)) {
-      return result;
+      return false;
     }
     if (/[\d]{4,}/.test(userName)) {
-      return result;
+      return false;
     }
     if (/(^\d|\d$)/.test(userName)) {
-      return result;
+      return false;
     }
     // eslint-disable-next-line no-useless-escape
     if (/^[\_\-]|[\_\-]$/.test(userName)) {
-      return result;
+      return false;
     }
-    if (/[0-9]/.test(userName)) {
-      result = true;
+    if (/[^0-9]/.test(userName)) {
+      return true;
     }
-    return result;
+    return true;
   }
 }

@@ -23,8 +23,12 @@ describe('Check in the validity', () => {
     const receiver = Validator.validateUsername('-qwere_');
     expect(receiver).toBeFalsy();
   });
-  test('should return true', () => {
+  test('should return  reverse digit false', () => {
     const receiver = Validator.validateUsername('qwer432ty');
     expect(receiver).toBeTruthy();
   });
+  // test('should return true', () => {
+  //   const receiver = Validator.validateUsername('qwe-re232z');
+  //   expect(receiver).toBeTruthy();
+  // });
 });
