@@ -16,12 +16,9 @@ export default class Validator {
     if (/^[\_\-]|[\_\-]$/.test(userName)) {
       return false;
     }
-    if (/[^0-9]/.test(userName)) {
+    if (!(/[0-9]/.test(userName))) {
       return true;
     }
     return true;
   }
 }
-
-// const receiver = Validator.validateUsername('qwe-re232z');
-// console.log(receiver)
