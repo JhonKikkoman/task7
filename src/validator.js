@@ -22,3 +22,6 @@ export default class Validator {
     return true;
   }
 }
+
+// const receiver = Validator.validateUsername('qwe-re232z');
+// console.log(receiver)

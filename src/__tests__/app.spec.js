@@ -27,8 +27,8 @@ describe('Check in the validity', () => {
     const receiver = Validator.validateUsername('qwer432ty');
     expect(receiver).toBeTruthy();
   });
-  // test('should return true', () => {
-  //   const receiver = Validator.validateUsername('qwe-re232z');
-  //   expect(receiver).toBeTruthy();
-  // });
+  test('should return true', () => {
+    // const receiver = Validator.validateUsername('qwe-re232z');
+    expect(Validator.validateUsername('qwe-re232z')).toBeTruthy();
+  });
 });
